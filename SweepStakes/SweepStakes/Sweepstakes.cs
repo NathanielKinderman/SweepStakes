@@ -6,11 +6,29 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class Sweepstakes
+    public class Sweepstakes
     {   //Dictonary data
-        //Sweepstakes(string name)
-        //void RegisterContestant(Contestant contestant)
-        //String PickWinner()
+        Dictionary<string, Contestant> contestants;
+        public Sweepstakes(string name)
+        {
+            contestants = new Dictionary<string, Contestant>();
+            //contestants.Add("jhbjhb", new Contestant());
+        }
+
+
+        void RegisterContestant(Contestant contestant)
+        {
+            GetContestantInfo();
+            RandomNumberGenerator(1,1000);
+
+        }
+
+
+
+        //String PickWinner()//random number generator for picking winner
+
+
+
         //void PrintContestantInfo(Contestant contestant)
 
 
