@@ -8,5 +8,11 @@ namespace SweepStakes
 {
     class SweepStakesManager
     {
+        //ISweepstakeManger interface
+        //Stack data
+        //Queue data
+
+
     }
+
 }

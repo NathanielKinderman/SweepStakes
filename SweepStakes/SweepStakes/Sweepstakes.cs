@@ -7,6 +7,14 @@ using System.Threading.Tasks;
 namespace SweepStakes
 {
     class Sweepstakes
-    {
+    {   //Dictonary data
+        //Sweepstakes(string name)
+        //void RegisterContestant(Contestant contestant)
+        //String PickWinner()
+        //void PrintContestantInfo(Contestant contestant)
+
+
+
+
     }
 }
