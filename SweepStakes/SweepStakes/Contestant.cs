@@ -18,11 +18,14 @@ namespace SweepStakes
 
 
         //constructor
-
+        public Contestant()
+        {
+            GetContestantInfo();
+        }
 
 
         //member methods
-        public string GetContestantInfo()
+        public void GetContestantInfo()
         {
             Console.WriteLine("Please enter your First Name:");
             FirstName = Console.ReadLine();
@@ -37,23 +40,15 @@ namespace SweepStakes
             Console.WriteLine("Please enter your Home Address:");
             Address = Console.ReadLine();
 
-            //link a random number generator to get registration Number?
-            Console.WriteLine("Heres your Registration Number:");
-            // RegistrationNumber = RandomNumberGenerator(1, 100);
-            // return;
-
-            // A dictionary should be here
-
         }
-
-         public int RandomNumberGenerator(int min, int max)
+        //contestant count instead of random number generator
+         public int ContestantRegistrationNumberGenerator(int min, int max)
         {
             Random random = new Random();
-            return random.Next(min, max); 
-
-
-
+            return random.Next(min, max);
         }
+
+       
 
     }
 

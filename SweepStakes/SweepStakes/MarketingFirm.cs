@@ -10,7 +10,16 @@ namespace SweepStakes
     {
         //Marking firm class = game class
         //dependency injection, utilize sweepstakes manager
+        
+        //member variable
 
+
+
+        //constructor
+
+
+
+        //member methods
 
 
     }
