@@ -11,10 +11,10 @@ namespace SweepStakes
 
 
         //constructors
-        Dictionary<string, Contestant> contestants;
+        Dictionary<int, Contestant> contestants;
         public Sweepstakes(string name)
         {
-            contestants = new Dictionary<string, Contestant>();
+            contestants = new Dictionary<int, Contestant>();
             
 
 
@@ -26,10 +26,10 @@ namespace SweepStakes
 
         void RegisterContestant(Contestant contestant)
         {
-            int x = contestants.Count;
+            int Contestantregisteration = contestants.Count;
             contestant.GetContestantInfo();
-            contestant.ContestantRegistrationNumberGenerator(1, 1000);
-            contestants.Add("jhbjhb", new Contestant());
+            
+            contestants.Add(Contestantregisteration, contestant);
 
         }
 
@@ -38,11 +38,11 @@ namespace SweepStakes
         String PickWinner()
         {//random number generator for picking winner
             // number linked to dictonary
-
-            contestant.count.RandomNumberGenerator(1, contestants.count);
+            //how to accesss diction match the key store in a variable the number that generated, get the value at matching key
+            RandomNumberGenerator(1, contestants.Count);
             //move generator here .contestant 
-
-            
+            //return name of the winner
+            return ;
 
 
         }

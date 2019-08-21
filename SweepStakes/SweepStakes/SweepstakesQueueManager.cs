@@ -6,48 +6,20 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class SweepstakesQueueManager
+    class SweepstakesQueueManager : ISweepstakesManager
     {
-        public void Queue()
+        Queue<Sweepstakes> SweepStakes = new Queue<Sweepstakes>();
+        public Sweepstakes GetSweepstakes()
         {
-            //ISweepstakesManager interface 
-            //queue data 
-            //member variables
-            Queue<int> SweepStakes = new Queue<int>();
-            SweepStakes.Enqueue(1);
-            SweepStakes.Enqueue(2);
-            SweepStakes.Enqueue(3);
-
-            
-
-            //constructor
-
-
-
-
-            //member methods
-            Console.WriteLine("Sweepstakes that are in queue:");
-            foreach (int number in SweepStakes)
-            {
-                Console.WriteLine(number);
-
-
-            }
-
-            int startOfQueue = SweepStakes.Dequeue();
-            SweepStakes.Enqueue(3);
-
-            Console.WriteLine("Sweepstakes in queue after Dequeue and Enqueue(3):");
-            foreach (int number in SweepStakes)
-            {
-
-                Console.WriteLine(number);
-
-            }
-
-
-
+            throw new NotImplementedException();
         }
+
+        public void InsertSweepstakes(Sweepstakes sweepstakes)
+        {
+            Sweepstakes.Enqueue();
+        }
+
+       
 
 
 
