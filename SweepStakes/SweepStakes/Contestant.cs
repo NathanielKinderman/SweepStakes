@@ -6,21 +6,20 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class Contestant
+    public class Contestant
     {
         //member variables
         //first name, last name, email, Address Registration number
-        string FirstName;
-        string LastName;
-        string Email;
-        string Address;
-        string RegistartionNumber;
+        public string FirstName;
+        public string LastName;
+        public string Email;
+        public string Address;
+        public int RegistrationNumber;
 
 
         //constructor
         public Contestant()
-        {
-            GetContestantInfo();
+        {       
         }
 
 
@@ -41,12 +40,7 @@ namespace SweepStakes
             Address = Console.ReadLine();
 
         }
-        //contestant count instead of random number generator
-         public int ContestantRegistrationNumberGenerator(int min, int max)
-        {
-            Random random = new Random();
-            return random.Next(min, max);
-        }
+        
 
        
 

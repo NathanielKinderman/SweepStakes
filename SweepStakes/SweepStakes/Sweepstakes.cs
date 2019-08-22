@@ -8,47 +8,54 @@ namespace SweepStakes
 {
     public class Sweepstakes
     {   //member variables
-
+        public string name;
 
         //constructors
         Dictionary<int, Contestant> contestants;
         public Sweepstakes(string name)
         {
             contestants = new Dictionary<int, Contestant>();
-            
-
-
-
-
+            this.name = name;
         }
         //member methods
 
 
-        void RegisterContestant(Contestant contestant)
+        public void RegisterContestant(Contestant contestant)
         {
             int Contestantregisteration = contestants.Count;
-            contestant.GetContestantInfo();
-            
+            contestant.RegistrationNumber = Contestantregisteration;
+            contestant.GetContestantInfo();            
             contestants.Add(Contestantregisteration, contestant);
 
         }
 
 
 
-        String PickWinner()
-        {//random number generator for picking winner
+        public string PickWinner()
+        {
             // number linked to dictonary
-            //how to accesss diction match the key store in a variable the number that generated, get the value at matching key
-            RandomNumberGenerator(1, contestants.Count);
-            //move generator here .contestant 
-            //return name of the winner
-            return ;
-
+            //how to accesss dictonary match the key store in a variable the number that generated, get the value at matching key
+            int winner = RandomNumberGeneratorForWinner(1, contestants.Count);
+            Contestant cont = contestants[winner];
+            return cont.FirstName;
 
         }
-        //void PrintContestantInfo(Contestant contestant)
 
-        public int RandomNumberGenerator(int min, int max)
+
+        public void PrintContestantInfo(Contestant contestant)
+        {
+            // Writing first and last name
+            Console.WriteLine(contestant); 
+        }
+
+
+
+
+
+
+
+
+        public int RandomNumberGeneratorForWinner(int min, int max)
         {
             Random random = new Random();
             return random.Next(min, max);

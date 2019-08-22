@@ -11,12 +11,12 @@ namespace SweepStakes
         Queue<Sweepstakes> SweepStakes = new Queue<Sweepstakes>();
         public Sweepstakes GetSweepstakes()
         {
-            throw new NotImplementedException();
+             return SweepStakes.Dequeue();
         }
 
         public void InsertSweepstakes(Sweepstakes sweepstakes)
         {
-            Sweepstakes.Enqueue();
+            SweepStakes.Enqueue(sweepstakes);
         }
 
        

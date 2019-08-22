@@ -6,26 +6,25 @@ using System.Threading.Tasks;
 
 namespace SweepStakes
 {
-    class SweepstakesFactory 
+    public static class SweepstakesFactory 
     {
     
-        //method injection but how????
-    //make a method and then use iSweepstakesMananger and then a swtich case for user to choose queue or stack
-    public ISweepstakesManager ChooseYourSweepstakesManagerStyle()
+    public static ISweepstakesManager ChooseYourSweepstakesManagerStyle()
         {
-            Console.WriteLine("");
-               string thing = Console.ReadLine().ToLower();
-            switch (thing))
+            Console.WriteLine("Pick 'stack' or 'queue'");
+            string thing = Console.ReadLine().ToLower();
+            switch (thing)
             {
                 case "stack":
                     return new SweepstakesStackManager();
 
                 case "queue":
                     return new SweepstakesQueueManager();
-
+                default:
+                    return ChooseYourSweepstakesManagerStyle();
 
             }
-
+            
         }
 
     }

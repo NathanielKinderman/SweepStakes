@@ -9,18 +9,41 @@ namespace SweepStakes
     class MarketingFirm
     {
         //Marking firm class = game class
-        //dependency injection, utilize sweepstakes manager
-        
-        //member variable
 
+        //member variable
+        ISweepstakesManager manager;
 
 
         //constructor
-
+        public MarketingFirm(ISweepstakesManager user)
+        {
+            manager = user;
+        }
 
 
         //member methods
-
+        public void CreateSweepstakes()
+        {
+            for (int j = 0; j < 5; j++)
+            {
+                Console.WriteLine("Enter a name for your sweepstakes:");
+                Sweepstakes sweepstakes = new Sweepstakes(Console.ReadLine());
+                for (int i = 0; i < 5; i++)
+                {
+                    sweepstakes.RegisterContestant(new Contestant());
+                }
+                manager.InsertSweepstakes(sweepstakes);
+            }
+        }
+        public void RunSweepstakes()
+        {
+            for (int i = 0; i < 5; i++)
+            {                
+                Sweepstakes sweep = manager.GetSweepstakes();
+                string winner = sweep.PickWinner();
+                Console.WriteLine(winner + " won " + sweep.name);
+            }
+        }
 
     }
 }
