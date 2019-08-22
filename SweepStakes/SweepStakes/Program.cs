@@ -13,7 +13,7 @@ namespace SweepStakes
             ISweepstakesManager manager = SweepstakesFactory.ChooseYourSweepstakesManagerStyle();
             MarketingFirm marketingFirm = new MarketingFirm(manager);
             marketingFirm.CreateSweepstakes();
-
+            marketingFirm.RunSweepstakes();
  
         }
     }

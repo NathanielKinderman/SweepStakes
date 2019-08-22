@@ -24,11 +24,11 @@ namespace SweepStakes
         //member methods
         public void CreateSweepstakes()
         {
-            for (int j = 0; j < 5; j++)
+            for (int j = 0; j < 3; j++)
             {
                 Console.WriteLine("Enter a name for your sweepstakes:");
                 Sweepstakes sweepstakes = new Sweepstakes(Console.ReadLine());
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < 2; i++)
                 {
                     sweepstakes.RegisterContestant(new Contestant());
                 }
@@ -42,6 +42,7 @@ namespace SweepStakes
                 Sweepstakes sweep = manager.GetSweepstakes();
                 string winner = sweep.PickWinner();
                 Console.WriteLine(winner + " won " + sweep.name);
+                Console.ReadLine();
             }
         }
 
